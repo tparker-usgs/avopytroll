@@ -1,7 +1,6 @@
 FROM debian:stretch AS gdal
-RUN apt-get -y install wget
 WORKDIR /build
-RUN wget http://download.osgeo.org/gdal/2.2.0/gdal-2.2.0.tar.gz 
+RUN  curl -fsSLO http://download.osgeo.org/gdal/2.2.0/gdal-2.2.0.tar.gz 
 RUN gzip -dc gdal-2.2.0.tar.gz | tar xf -
 WORKDIR /build/gdal-2.2.0 
 RUN ./configure
@@ -10,10 +9,9 @@ RUN make install
 
 
 FROM debian:stretch as gshhg
-RUN apt-get -y install wget
 WORKDIR /app
 WORKDIR /app/gshhg
-RUN wget http://www.soest.hawaii.edu/pwessel/gshhg/gshhg-shp-2.3.6.zip
+RUN curl -fsSLO http://www.soest.hawaii.edu/pwessel/gshhg/gshhg-shp-2.3.6.zip
 RUN unzip gshhg-shp-2.3.6.zip 
 
 
