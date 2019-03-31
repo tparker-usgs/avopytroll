@@ -21,4 +21,5 @@ EOF
 export CFLAGS="-fpermissive"
 python setup.py install
 
-
+cd ..
+rm -r aggdraw-1.1-20051010*
