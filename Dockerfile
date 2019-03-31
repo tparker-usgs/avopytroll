@@ -26,7 +26,7 @@ RUN unzip gshhg-shp-2.3.6.zip
 FROM python:3.7
 
 COPY --from=gdal /usr/local /usr/local
-COPY --from=gshhg /gshgg /usr/local/gshgg
+COPY --from=gshhg /gshhg /usr/local/gshhg
 
 RUN apt-get update && apt-get install -y \
   libfreetype6 \
