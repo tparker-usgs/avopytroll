@@ -30,10 +30,10 @@ COPY --from=gshhg /build/gshgg /usr/local/gshgg
 
 RUN apt-get update && apt-get install -y \
   libfreetype6 \
-  libfreetype6-dev
+  libfreetype6-dev \
   libhdf5-serial-dev \
   libnetcdf-dev \
-  unzip \
+  unzip 
 
 RUN ln -s /usr/include/freetype2 /usr/include/freetype  
 
