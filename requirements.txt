@@ -5,7 +5,7 @@ numpy==1.11.0
 pyzmq
 pykdtree
 supervisor
--e git@github.com:Supervisor/supervisor.git@master#egg=supervisor
+-e git+git@github.com:Supervisor/supervisor.git@master#egg=supervisor
 gdal
 netifaces
 python-dateutil
