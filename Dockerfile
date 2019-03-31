@@ -1,4 +1,4 @@
-FROM debian:stretch AS gdal
+FROM gcc AS gdal
 WORKDIR /build
 RUN apt-get update && apt-get -y install curl
 RUN  curl -fsSLO http://download.osgeo.org/gdal/2.2.0/gdal-2.2.0.tar.gz 
@@ -9,7 +9,7 @@ RUN make
 RUN make install 
 
 
-FROM debian:stretch as gshhg
+FROM gcc as gshhg
 WORKDIR /app
 WORKDIR /app/gshhg
 RUN apt-get update && apt-get -y install curl
