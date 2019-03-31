@@ -3,7 +3,6 @@
 ##############
 FROM gcc:6 AS gdal
 WORKDIR /build
-RUN apt-get update && apt-get -y install curl
 RUN  curl -fsSLO http://download.osgeo.org/gdal/2.2.0/gdal-2.2.0.tar.gz 
 RUN gzip -dc gdal-2.2.0.tar.gz | tar xf -
 WORKDIR /build/gdal-2.2.0 
@@ -18,7 +17,6 @@ RUN make install
 ##################
 FROM gcc:6 as gshhg
 WORKDIR /build
-RUN apt-get update && apt-get -y install curl
 RUN curl -fsSLO http://www.soest.hawaii.edu/pwessel/gshhg/gshhg-shp-2.3.6.zip
 RUN unzip gshhg-shp-2.3.6.zip 
 
