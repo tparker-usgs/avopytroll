@@ -1,16 +1,3 @@
-##############
-# build gdal #
-##############
-FROM gcc:6 AS gdal
-WORKDIR /build
-RUN  curl -fsSLO http://download.osgeo.org/gdal/2.2.0/gdal-2.2.0.tar.gz 
-RUN gzip -dc gdal-2.2.0.tar.gz | tar xf -
-WORKDIR /build/gdal-2.2.0 
-RUN ./configure
-RUN make
-RUN make install 
-
-
 ##################
 # retrieve gshhg #
 ##################
@@ -33,7 +20,6 @@ RUN apt-get update && apt-get install -y \
   libfreetype6-dev \
   libhdf5-serial-dev \
   libnetcdf-dev \
-  numpy \
   unzip 
 
 RUN ln -s /usr/include/freetype2 /usr/include/freetype  
