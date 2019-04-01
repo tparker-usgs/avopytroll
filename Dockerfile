@@ -17,10 +17,13 @@ COPY --from=gshhg /gshhg /usr/local/gshhg
 
 RUN ldconfig
 RUN apt-get update && apt-get install -y \
+  gdal-bin \
   libfreetype6 \
   libfreetype6-dev \
   libhdf5-serial-dev \
   libnetcdf-dev \
+  python-gdal \
+  python-numpy \
   unzip 
 
 RUN ln -s /usr/include/freetype2 /usr/include/freetype  
