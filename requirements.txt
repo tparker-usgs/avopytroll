@@ -1,7 +1,6 @@
-Pillow==2.1.0
+Pillow
 netCDF4
 h5py
-numpy==1.11.0
 pyzmq
 pykdtree
 -e https://github.com/Supervisor/supervisor.git@master#egg=supervisor
@@ -10,4 +9,4 @@ netifaces
 python-dateutil
 pytz
 requests
-tomputils>=1.1.2
+tomputils>=1.12.16

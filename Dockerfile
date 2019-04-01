@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y \
   libfreetype6-dev \
   libhdf5-serial-dev \
   libnetcdf-dev \
+  numpy \
   unzip 
 
 RUN ln -s /usr/include/freetype2 /usr/include/freetype  
