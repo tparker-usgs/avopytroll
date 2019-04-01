@@ -1,10 +1,11 @@
-Pillow
+numpy
 netCDF4
 h5py
 pyzmq
 pykdtree
 -e git+https://github.com/Supervisor/supervisor.git@master#egg=supervisor
 gdal
+Pillow
 netifaces
 python-dateutil
 pytz
