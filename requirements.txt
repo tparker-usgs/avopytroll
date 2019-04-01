@@ -4,7 +4,7 @@ h5py
 pyzmq
 pykdtree
 -e git+https://github.com/Supervisor/supervisor.git@master#egg=supervisor
-gdal
+gdal==2.3.3
 Pillow
 netifaces
 python-dateutil
