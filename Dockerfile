@@ -14,9 +14,9 @@ RUN make install
 ##################
 # retrieve gshhg #
 ##################
-FROM gcc:6 as gshhg
+FROM busybox as gshhg
 WORKDIR /gshhg
-RUN curl -fsSLO http://www.soest.hawaii.edu/pwessel/gshhg/gshhg-shp-2.3.6.zip
+RUN wget http://www.soest.hawaii.edu/pwessel/gshhg/gshhg-shp-2.3.6.zip
 RUN unzip gshhg-shp-2.3.6.zip 
 
 
