@@ -3,7 +3,7 @@ netCDF4
 h5py
 pyzmq
 pykdtree
--e https://github.com/Supervisor/supervisor.git@master#egg=supervisor
+-e git+https://github.com/Supervisor/supervisor.git@master#egg=supervisor
 gdal
 netifaces
 python-dateutil
