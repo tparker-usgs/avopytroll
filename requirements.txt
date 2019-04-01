@@ -9,3 +9,5 @@ python-dateutil
 pytz
 requests
 tomputils>=1.12.16
+posttroll
+pytroll-collectors
