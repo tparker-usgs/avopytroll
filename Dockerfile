@@ -15,7 +15,6 @@ FROM python:3.7
 COPY --from=tparkerusgs/gdal /usr/local /usr/local
 COPY --from=gshhg /gshhg /usr/local/gshhg
 
-RUN ldconfig
 RUN apt-get update && apt-get install -y \
   gdal-bin \
   libfreetype6 \
@@ -28,6 +27,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN ln -s /usr/include/freetype2 /usr/include/freetype  
 
+RUN useradd -u 2001 auto
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
