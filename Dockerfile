@@ -34,4 +34,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 WORKDIR /usr/src/
 COPY installAggdraw.sh .
-RUN ./installAggdraw.sh
+RUN ./installAggdraw.sh && rm installAggdraw.sh
