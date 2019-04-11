@@ -10,7 +10,7 @@ pytz
 requests
 tomputils>=1.12.16
 pyresample
-trollsched
+pytroll-schedule
 posttroll
 pytroll-collectors
 satpy
