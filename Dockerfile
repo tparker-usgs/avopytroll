@@ -5,6 +5,7 @@ FROM busybox as gshhg
 WORKDIR /gshhg
 RUN wget http://www.soest.hawaii.edu/pwessel/gshhg/gshhg-shp-2.3.6.zip
 RUN unzip gshhg-shp-2.3.6.zip
+RUN chmod -R 755 .
 
 
 ###################
