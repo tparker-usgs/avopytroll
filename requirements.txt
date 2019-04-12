@@ -12,7 +12,6 @@ tomputils>=1.12.16
 pyresample
 pytroll-schedule
 posttroll
+pydecorate
 pytroll-collectors
 satpy
-
-
