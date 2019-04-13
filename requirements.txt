@@ -13,5 +13,6 @@ pyresample
 pytroll-schedule
 posttroll
 pydecorate
+pyspectral
 pytroll-collectors
 satpy
