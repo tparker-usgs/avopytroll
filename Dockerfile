@@ -39,6 +39,8 @@ ENV PPP_CONFIG_DIR=/app/trollconfig \
     GSHHS_DATA_ROOT=/app/gshhg \
     PSP_CONFIG_FILE=/app/trollconfig/pyspectral.yaml
 
+RUN pwd && echo "tomp says" && ls && echo "tomp says2" && ls /app && echo "tomp says3" && ls /app/trollconfig
+
 COPY download_luts.py .
 RUN ./download_luts.py
 
