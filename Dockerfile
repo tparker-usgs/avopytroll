@@ -34,6 +34,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+ENV REQUESTS_CA_BUNDLE=/app/DOIRootCA.pem
+COPY DOIRootCA.pem .
+
 WORKDIR /usr/src/
 COPY installAggdraw.sh .
 RUN ./installAggdraw.sh && rm installAggdraw.sh
