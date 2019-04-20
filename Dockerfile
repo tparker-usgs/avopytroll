@@ -34,6 +34,14 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+COPY trollconfig .
+ENV PPP_CONFIG_DIR=/app/trollconfig \
+    GSHHS_DATA_ROOT=/app/gshhg \
+    PSP_CONFIG_FILE=/app/trollconfig/pyspectral.yaml
+
+COPY download_luts.py .
+RUN ./download_luts.py
+
 ENV REQUESTS_CA_BUNDLE=/app/DOIRootCA.pem
 COPY DOIRootCA.pem .
 
