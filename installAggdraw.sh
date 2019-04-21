@@ -15,7 +15,7 @@ patch -p1 <<EOF
 +FREETYPE_ROOT = "/usr"
  
  if not os.path.isdir(FREETYPE_ROOT):
-     print "===", "freetype support disabled"
+     print("===", "freetype support disabled")
 EOF
 
 export CFLAGS="-fpermissive"
