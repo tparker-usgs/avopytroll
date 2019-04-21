@@ -38,8 +38,8 @@ COPY trollconfig trollconfig
 ENV PPP_CONFIG_DIR=/app/trollconfig \
     GSHHS_DATA_ROOT=/app/gshhg \
     PSP_CONFIG_FILE=/app/trollconfig/pyspectral.yaml
-COPY download_luts.py .
-RUN ./download_luts.py
+COPY download_luts_rsr.py .
+RUN ./download_luts_rsr.py
 
 ENV REQUESTS_CA_BUNDLE=/app/DOIRootCA.pem
 COPY DOIRootCA.pem .

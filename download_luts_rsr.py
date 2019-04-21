@@ -16,3 +16,4 @@
 import pyspectral.utils as utils
 
 utils.download_luts()
+utils.download_rsr()
