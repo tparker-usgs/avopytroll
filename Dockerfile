@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y \
   libnetcdf-dev \
   python-gdal \
   python-numpy \
-
+  vim \
   unzip
 
 RUN ln -s /usr/include/freetype2 /usr/include/freetype
