@@ -1,5 +1,6 @@
 netCDF4
 h5py
+pyhdf
 pyzmq
 pykdtree
 -e git+https://github.com/Supervisor/supervisor.git@master#egg=supervisor
