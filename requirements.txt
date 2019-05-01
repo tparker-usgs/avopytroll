@@ -17,4 +17,3 @@ pyspectral
 pytroll-collectors
 satpy
 rasterio
-pyhdf
