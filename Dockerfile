@@ -39,7 +39,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY trollconfig trollconfig
 ENV PPP_CONFIG_DIR=/app/trollconfig \
     GSHHS_DATA_ROOT=/app/gshhg \
-    PSP_CONFIG_FILE=/app/trollconfig/pyspectral.yaml
+    PSP_CONFIG_FILE=/app/trollconfig/pyspectral.yaml \
+    PYTHONUNBUFFERED=1
+
 COPY download_luts_rsr.py .
 RUN ./download_luts_rsr.py
 
