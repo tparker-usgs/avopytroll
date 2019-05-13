@@ -45,7 +45,6 @@ ENV PPP_CONFIG_DIR=/app/trollconfig \
 COPY download_luts_rsr.py .
 RUN ./download_luts_rsr.py
 
-ENV REQUESTS_CA_BUNDLE=/app/DOIRootCA.pem
 COPY DOIRootCA.pem .
 
 WORKDIR /usr/src/
